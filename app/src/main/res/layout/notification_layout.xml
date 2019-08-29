@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/noti_shape"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/notification_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="@string/app_name"
+            android:textColor="@color/item_text_two"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:paddingEnd="15dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="15dp"
+        android:paddingStart="25dp"
+        android:paddingTop="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_noti_number"
+                style="@style/notification_tv"
+                android:text="+86 18733700412"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_noti_country"
+                style="@style/notification_tv"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/item_text_two"
+                android:text="China" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_noti_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/avatar" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="@drawable/noti_bottom_shape"
+        android:layout_height="35dp">
+        <LinearLayout
+            android:id="@+id/ll_noti_hangup"
+            style="@style/notification_ll"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/notification_hangup" />
+
+            <TextView
+               style="@style/notification_tv_bottom"
+                android:text="@string/hangup" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_noti_speaker"
+            style="@style/notification_ll"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/notification_speaker" />
+
+            <TextView
+                style="@style/notification_tv_bottom"
+                android:text="@string/speaker" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

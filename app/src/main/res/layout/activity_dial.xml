@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.baisi.whatsfreecall.ui.activity.DialActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/card"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <LinearLayout
+            android:id="@+id/ll_dail_go_country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_dial_show_country_icon"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:src="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/tv_country_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:text="Unted Kingdom"
+                android:textColor="@color/item_text_one"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dial_down_icon" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_country_number_dial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="4"
+                android:background="@null"
+                android:gravity="bottom|left"
+                android:singleLine="true"
+                android:text="+77"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/et_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="left|bottom"
+                android:hint="Enter Number"
+                android:singleLine="true"
+                android:textColor="@color/item_text_one"
+                android:textSize="30sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_dial_80"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_above="@+id/ll_keyboard"
+        android:layout_height="80dp"
+        android:visibility="gone"
+        android:layout_below="@+id/ll_top"></FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <com.baisi.whatsfreecall.view.KeyBoardView
+            android:id="@+id/mykb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></com.baisi.whatsfreecall.view.KeyBoardView>
+    </LinearLayout>
+</RelativeLayout>

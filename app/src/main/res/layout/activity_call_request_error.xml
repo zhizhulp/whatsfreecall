@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/call_request_color"
+
+    tools:context="com.baisi.whatsfreecall.ui.activity.CallRequestErrorActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:background="@color/translate"
+            android:theme="@style/CleanThemeAppBarOverlay"
+            app:elevation="0dp">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/call_result_toolbar_no"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/CleanThemePopupOverlay"
+                app:title="@string/call"></android.support.v7.widget.Toolbar>
+        </android.support.design.widget.AppBarLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="10dp">
+
+            <com.baisi.whatsfreecall.view.CircleImageView
+                android:id="@+id/civ_call_result_icon_no"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/avatar" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toEndOf="@+id/civ_call_result_icon_no"
+                android:layout_toRightOf="@+id/civ_call_result_icon_no"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_call_result_name_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ANNA"
+                    android:textColor="@color/nav_text_color"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_error_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="No Answer"
+                    android:textColor="@color/light_red" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true">
+
+                <Button
+                    android:id="@+id/btn_call_redial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:background="@drawable/btn_green_shape"
+                    android:text="@string/redial"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/btn_call_recharge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:background="@drawable/btn_green_shape"
+                    android:text="@string/recharge"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_watch_videos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:clickable="true"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:text="@string/want_to_get_free_money"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="13dp"
+                    android:background="@drawable/btn_green_shape"
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingLeft="10dp"
+                    android:text="@string/watch_video_ads"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:scaleType="centerCrop"
+                android:src="@drawable/error_money_icon" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_call_request_email_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:clickable="false"
+                android:enabled="false"
+                android:text="@string/have_problem_whit_the_call"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/btn_green_shape"
+                android:clickable="false"
+                android:enabled="false"
+                android:text="@string/feedback"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <include layout="@layout/native_wrap_layout" />
+    </LinearLayout>
+
+    <include layout="@layout/progress_layout" />
+</FrameLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <!--修改menuiten icon大小的方法  覆盖android 源码引用 14sp（google推荐图标）-->
+    <!--<dimen name="design_navigation_icon_size">30dp</dimen>-->
+    <dimen name="space">20dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="fab_size_normal">65dp</dimen>
+</resources>

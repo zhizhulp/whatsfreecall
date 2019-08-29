@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">WhatsWeCall</string>
+    <string name="app_name_title">WeCall</string>
+<!--    <string name="ok">OK</string>
+    &lt;!&ndash;侧边栏&ndash;&gt;
+    <string name="balance">Balance</string>
+    <string name="call_rate">Call Rate</string>
+    <string name="share">Share</string>
+    <string name="feedback">Feedback</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    &lt;!&ndash;首页&ndash;&gt;
+    <string name="title_contacts">CONTACTS</string>
+    <string name="title_recents">RECENTS</string>
+    &lt;!&ndash;充值&ndash;&gt;
+    <string name="charge">Charge</string>
+    <string name="free">Free</string>
+    <string name="watch_video_ads">Watch Video Ads</string>
+    <string name="balance_charge">Balance:</string>
+    <string name="charge_success">Successfully Recharged !</string>
+    <string name="charge_success_msg">Let\'s begin the first call!</string>
+    <string name="purash">Purchasing</string>
+    <string name="charge_progress_msg">Please wait a moment</string>
+    <string name="load_end_msg">There is no purchase of goods</string>
+    &lt;!&ndash;登陆提示&ndash;&gt;
+    <string name="login_msg">Log in to enjoy the cheap VoIp service for international calls.</string>
+    <string name="btn_login">LOGIN WITH GOOGLE</string>
+    <string name="btn_cancel">CANCEL</string>
+    <string name="wait">Please wait...</string>
+    <string name="login_web">Can\'t login ? Try this</string>
+    &lt;!&ndash;Error&ndash;&gt;
+    <string name="btn_close">CLOSE</string>
+    <string name="report_the_error">REPORT THE ERROR</string>
+    &lt;!&ndash;国家选择&ndash;&gt;
+    <string name="select_country_title">Select a countryEntity</string>
+    <string name="search">Search</string>
+    &lt;!&ndash;打电话界面&ndash;&gt;
+    <string name="rate">Rate</string>
+    <string name="usd">USD</string>
+    <string name="time_remain">Time remain</string>
+    <string name="hide">HIDE</string>
+    &lt;!&ndash;打电话结果页面&ndash;&gt;
+    <string name="call">Call</string>
+    <string name="have_problem_whit_the_call">Have problem with the call?</string>
+    <string name="redial">Redial</string>
+    <string name="hangup">HANG UP</string>
+    <string name="speaker">SPEAKER</string>
+    <string name="load_progree_msg">Loading call information...</string>
+    &lt;!&ndash;拨号&ndash;&gt;
+    <string name="check_phone_msg">Please check the number accuracy</string>
+    <string name="enter_phone">Please enter phone number</string>
+    &lt;!&ndash;余额不足&ndash;&gt;
+    <string name="insufficient_balance">The remaining amount is not enough, please recharge</string>
+    <string name="congratuation">Congratuation!</string>
+    &lt;!&ndash;视频广告&ndash;&gt;
+    <string name="video_cancel">Since you canceled the video ad, please receive the award after watching the video</string>
+    <string name="watch_video_ads_un">Preparing Watch Video Ads</string>
+    <string name="reward">Reward...</string>-->
+</resources>

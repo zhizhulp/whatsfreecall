@@ -1,0 +1,15 @@
+<resources>
+    <string name="notification_number" translatable="false"><Data><![CDATA[<font color="#129E6C">%1$s</font> %2$s]]></Data></string>
+    <string name="facebook_app_id" translatable="false">410538196046267</string>
+    <string name="server_client_id" translatable="false">167220273530-8s55ohjp5ar2ipj3nmj5itr64k04nmo6.apps.googleusercontent.com</string>
+    <string name="client_id" translatable="false">167220273530-gqd1h83ucjqkg4k3mscn7ls52l3dvfrb.apps.googleusercontent.com</string>
+    <string name="base64EncodedPublicKey" translatable="false">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvFmjsQFcMk/YRIx8hyqjOVx4m59egQEwAO4GRXZNxHAAYAHAE+ZiaGJUD9g6qQ5bEOCtqiWnoo5fmBT7vorf9UfVW3KU/TqYcCr9jB7X6h/I7lNuDOE0Im+KjrTiAW5d2/3Z1RaI6fYanQUPYOvAZHzTxUS4nWeHMm4ptnCesjKeDTuhaH3mqVX1Squ2RVnrvguVM2PXeo/JJ2OmDeDn0sLKybIqxaKE6SCLmF1wxIEaQ40zBlHkZnbpkxOBukHgvVm7cBUXDjEJda+nPTsBQ3kvAJXEbADKC6oWuW1Otb29y1iTjYnNiM0ViikZJvGdvqrrWtxfodoFYx5nyGUgEwIDAQAB</string>
+    <string-array name="sku_list">
+        <item>p_1001</item>
+        <item>p_1002</item>
+        <item>p_1003</item>
+        <item>p_1004</item>
+        <item>p_1005</item>
+        <item>p_1006</item>
+    </string-array>
+</resources>

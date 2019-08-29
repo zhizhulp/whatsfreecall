@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.baisi.whatsfreecall.ui.activity.ChargeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:background="@color/translate"
+            android:theme="@style/CleanThemeAppBarOverlay"
+            app:elevation="0dp">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/charge_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/CleanThemePopupOverlay"
+                app:title="@string/charge"></android.support.v7.widget.Toolbar>
+        </android.support.design.widget.AppBarLayout>
+        <!--Balance-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <TextView
+                style="@style/charge_title_left"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:text="@string/balance_charge" />
+
+            <TextView
+                android:id="@+id/tv_charge_show_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:text="$3.60"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <TextView style="@style/line_style" />
+        <!--Charge-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                style="@style/charge_title_left"
+                android:text="@string/charge" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rlv_charge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                </android.support.v7.widget.RecyclerView>
+
+                <LinearLayout
+                    android:id="@+id/charge_ll_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="210dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ProgressBar
+                        android:id="@+id/pb_charge"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:indeterminateTint="@color/colorPrimary"
+                        android:indeterminateTintMode="src_atop" />
+
+                    <TextView
+                        android:id="@+id/tv_show_laod_charge_success"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/wait"
+                        android:textColor="@color/item_text_one"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <TextView style="@style/line_style" />
+        <!--earn more money-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                style="@style/charge_title_left"
+                android:layout_marginBottom="20dp"
+                android:text="@string/free" />
+            <Button
+                android:textAllCaps="false"
+                android:onClick="goToEarnMoney"
+                android:background="@drawable/btn_earn_bg"
+                android:textColor="@color/white"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/go_earn_money"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+            <!--SIgnIn-->
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/rl_sign_in"
+                style="@style/charge_rl">
+
+                <ImageView
+                    android:id="@+id/iv_signin"
+                    style="@style/charge_image_style"
+                    android:src="@drawable/ic_sign_in" />
+
+                <TextView
+                    style="@style/charge_bottom_text"
+                    android:layout_toRightOf="@+id/iv_signin"
+                    android:text="@string/daily_checkin" />
+
+                <TextView
+                    android:id="@+id/charge_signin"
+                    style="@style/charge_bottom_btn_style"
+                    android:text="@string/check_in" />
+
+            </RelativeLayout>
+            <TextView style="@style/line_style"
+                android:visibility="gone"/>
+            <!--watch videos-->
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/ll_charge_watch"
+                style="@style/charge_rl">
+
+                <ImageView
+                    android:id="@+id/iv_video"
+                    style="@style/charge_image_style"
+                    android:src="@drawable/ic_charge_video" />
+
+                <TextView
+                    style="@style/charge_bottom_text"
+                    android:layout_toRightOf="@+id/iv_video"
+                    android:text="@string/watch_video_ads" />
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true">
+
+                    <ProgressBar
+                        android:id="@+id/charge_progress"
+                        android:layout_width="120dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="bottom"
+                        android:indeterminate="false"
+                        android:indeterminateOnly="false"
+                        android:max="5"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/progress_vertical" />
+
+                    <TextView
+                        android:id="@+id/charge_btn_1"
+                        style="@style/charge_bottom_btn_style"
+                        android:background="@drawable/charge_bottom_tv_1_shape"
+                        android:text="$0.0003~$3" />
+                </FrameLayout>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/progress_layout" />
+</FrameLayout>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/call_screen_bg"
+    android:orientation="vertical"
+    tools:context="com.baisi.whatsfreecall.ui.activity.CallScreenActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_show_call_number_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_call_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:text="+4415101099390"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_call_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="Calling"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/callDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="4dp"
+                android:text="00:00"
+                android:visibility="invisible"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_input_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="30dp">
+
+        <LinearLayout
+            android:id="@+id/ll_call_rate_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                style="@style/call_bg_style"
+
+                android:background="@drawable/call_msg_shape">
+
+                <ImageView
+                    android:id="@+id/iv_call_country_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/flag_gb" />
+
+                <TextView
+                    android:id="@+id/tv_count_name"
+                    style="@style/call_text"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toEndOf="@+id/iv_call_country_icon"
+                    android:layout_toRightOf="@+id/iv_call_country_icon"
+                    android:text="United Kingdom" />
+
+                <TextView
+                    android:id="@+id/tv_call_time"
+                    style="@style/call_text_right"
+                    android:text="00:00AM" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/call_bg_style"
+                android:background="@drawable/call_msgdefaule_shape">
+
+                <TextView
+                    style="@style/call_text"
+                    android:text="@string/rate" />
+
+                <TextView
+                    android:id="@+id/tv_call_rate"
+                    style="@style/call_text_right"
+                    android:text="-" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/call_bg_style"
+                android:background="@drawable/call_msgdefaule_shape">
+
+                <TextView
+                    style="@style/call_text"
+                    android:text="@string/usd" />
+
+                <TextView
+                    android:id="@+id/tv_call_usd"
+                    style="@style/call_text_right"
+                    android:text="-" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/call_bg_style"
+                android:background="@drawable/call_msgdefaule_shape">
+
+                <TextView
+                    style="@style/call_text"
+                    android:text="@string/time_remain" />
+
+                <TextView
+                    android:id="@+id/tv_call_endtime"
+                    style="@style/call_text_right"
+                    android:text="-" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/call_bg_style"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/iv_audio"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:scaleType="center"
+                    android:src="@drawable/mic_off" />
+
+                <ImageView
+                    android:id="@+id/iv_keyboard"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="center"
+                    android:src="@drawable/call_dial" />
+
+                <ImageView
+                    android:id="@+id/iv_speaker"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:scaleType="center"
+                    android:src="@drawable/speaker_off" />
+            </RelativeLayout>
+        </LinearLayout>
+        <!--keyboard-->
+        <com.baisi.whatsfreecall.view.CallScreenKeyBoard
+            android:id="@+id/csb_keyboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"></com.baisi.whatsfreecall.view.CallScreenKeyBoard>
+    </FrameLayout>
+
+    <RelativeLayout
+        style="@style/call_bg_style"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:gravity="center_vertical"
+        >
+
+        <Button
+            android:id="@+id/call_keyboard_hide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/hide"
+            android:gravity="left|center"
+            android:background="@null"
+            android:textColor="@color/white"
+            android:visibility="invisible"
+            android:textSize="18sp"
+             />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_call_end"
+            android:layout_width="wrap_content"
+            android:src="@drawable/call_end_fab"
+            app:fabSize="normal"
+            android:layout_centerInParent="true"
+            app:backgroundTint="@color/light_red"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            />
+
+    </RelativeLayout>
+</LinearLayout>

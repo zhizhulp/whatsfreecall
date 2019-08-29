@@ -1,0 +1,94 @@
+{
+  "project_info": {
+    "project_number": "167220273530",
+    "firebase_url": "https://voip-fd77e.firebaseio.com",
+    "project_id": "voip-fd77e",
+    "storage_bucket": "voip-fd77e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:167220273530:android:5aa531527b276080",
+        "android_client_info": {
+          "package_name": "com.storebuff.whatsfreecall"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "167220273530-8s55ohjp5ar2ipj3nmj5itr64k04nmo6.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "167220273530-dn5ic7m4plvv9o5ne4tfinb3b5ijt7p0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.storebuff.whatsfreecall",
+            "certificate_hash": "57355b1f4dcae89cc225128fa4467f7bcd8f70c8"
+          }
+        },
+        {
+          "client_id": "167220273530-bd6duhf69lpvc4ev0rdmsdt72ntmvtij.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBG3Sw3H719EV0mI6rGQO9SmtwhM59CUE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "167220273530-8s55ohjp5ar2ipj3nmj5itr64k04nmo6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:167220273530:android:d950366e1b66274d",
+        "android_client_info": {
+          "package_name": "art.keplers.free.voip.aquarius"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "167220273530-8s55ohjp5ar2ipj3nmj5itr64k04nmo6.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "167220273530-bd6duhf69lpvc4ev0rdmsdt72ntmvtij.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBG3Sw3H719EV0mI6rGQO9SmtwhM59CUE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

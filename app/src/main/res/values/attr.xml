@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TimeLineMarker">
+        <attr name="markerSize" format="dimension"/>
+        <attr name="marker" format="color|reference"/>
+        <attr name="beginLine" format="color|reference"/>
+        <attr name="endLine" format="color|reference"/>
+        <attr name="lineSize" format="dimension"/>
+    </declare-styleable>
+    <declare-styleable name="AnimDownloadProgressButton">
+        <attr name="progressbtn_radius" format="float"/>
+        <attr name="progressbtn_background_color" format="color"/>
+        <attr name="progressbtn_background_second_color" format="color"/>
+        <attr name="progressbtn_text_size" format="float"/>
+        <attr name="progressbtn_text_color" format="color"/>
+        <attr name="progressbtn_text_covercolor" format="color"/>
+        <attr name="progressbtn_enable_press" format="boolean"/>
+        <attr name="progressbtn_enable_gradient" format="boolean"/>
+        <attr name="progressbtn_current_text" format="string|reference"/>
+    </declare-styleable>
+    <declare-styleable name="StateStar">
+        <attr name="star_enable_pic" format="reference"/>
+        <attr name="star_dis_enable_pic" format="reference"/>
+        <attr name="icon_enable_pic" format="reference"/>
+        <attr name="icon_dis_enable_pic" format="reference"/>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/invite_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.baisi.whatsfreecall.ui.activity.earn_money.InviteActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Invite Friend" />
+
+    <TextView
+        android:textColor="@color/white"
+        android:id="@+id/tv_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/invite_desc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <ImageView
+        android:id="@+id/im_invite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desc"
+        app:srcCompat="@mipmap/invite" />
+
+    <TextView
+        android:textColor="@color/white"
+        android:id="@+id/tv_code_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/invite_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/im_invite" />
+
+    <TextView
+        android:textColor="@color/white"
+        android:id="@+id/tv_invite_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_code_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_code_title" />
+
+    <TextView
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:background="@drawable/invite_btn_bg"
+        android:id="@+id/tv_copy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="copy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_code_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_code_title" />
+
+    <TextView
+        android:background="@drawable/invite_top_btn_bg"
+        android:textColor="@color/invite_bg"
+        android:id="@+id/tv_get_money"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Invite friends +$0.1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_copy" />
+
+    <TextView
+        android:background="@drawable/invite_btm_btn_bg"
+        android:textColor="@color/white"
+        android:id="@+id/tv_enter_code"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Enter invitation code"
+        app:layout_constraintEnd_toEndOf="@+id/tv_get_money"
+        app:layout_constraintStart_toStartOf="@+id/tv_get_money"
+        app:layout_constraintTop_toBottomOf="@+id/tv_get_money" />
+</android.support.constraint.ConstraintLayout>

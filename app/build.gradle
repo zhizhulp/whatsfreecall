@@ -1,0 +1,139 @@
+apply plugin: 'com.android.application'
+buildscript {
+    repositories {
+        mavenCentral()
+        maven { url 'https://maven.fabric.io/public' }
+    }
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+apply plugin: 'io.fabric'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://maven.fabric.io/public' }
+    maven {
+        url 'https://jitpack.io'
+    }
+    flatDir {
+        dirs 'libs'
+    }
+}
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.1"
+    defaultConfig {
+        applicationId "com.storebuff.whatsfreecall"
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode 12
+        versionName "1.1.1"
+        multiDexEnabled true
+    }
+    //移除lint检测的error
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+
+    /*dexOptions {
+        javaMaxHeapSize "4g"
+    }*/
+    signingConfigs {
+        config {
+            keyAlias 'baisicall'
+            keyPassword '123456'
+            storeFile file('./callkeystore.jks')
+            storePassword '123456'
+        }
+    }
+    productFlavors {
+        dev {
+            //applicationId "com.storebuff.whatsfreecall"
+            applicationId "art.keplers.free.voip.aquarius"
+            buildConfigField("String", "HOST_URL", "\"https://z-storebuff-com-btfzwbs8pakd.runscope.net/voip/v1/\"")
+            buildConfigField("String", "RECIVER_FILTER", "\"com.storebuff.whatsfreecall.HANDLE_AUTHORIZATION_RESPONSE\"")
+            buildConfigField("String", "AUTH_BACK", "\"com.storebuff.whatsfreecall:/oauth2callback\"")
+            buildConfigField("String", "SINCH_APPKEY", "\"a8c5deb8-ef9f-4227-bc79-8e36ed596686\"")
+            buildConfigField("String", "SINCH_APP_SECRET", "\"odc2XdPSC0aj1EYhUE+7lA==\"")
+
+        }
+        formal {
+            applicationId "art.keplers.free.voip.aquarius"
+            //正式服务器
+            buildConfigField("String", "HOST_URL", "\"https://voip-api.keplers.art/v1/\"")
+            //正式服务器测试地址
+//            buildConfigField ("String","HOST_URL" ,"\"https://voip--api-keplers-art-mpz9srohfqsw.runscope.net/v1/\"")
+            buildConfigField("String", "RECIVER_FILTER", "\"art.keplers.free.voip.aquarius.HANDLE_AUTHORIZATION_RESPONSE\"")
+            buildConfigField("String", "AUTH_BACK", "\"art.keplers.free.voip.aquarius:/oauth2callback\"")
+            buildConfigField("String", "SINCH_APPKEY", "\"8df34b41-4c2f-4b66-af92-d2f931d81f2a\"")
+            buildConfigField("String", "SINCH_APP_SECRET", "\"pTr3Gcb2CkycLP3gvI1pEQ==\"")
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            minifyEnabled = false
+            signingConfig signingConfigs.config
+        }
+    }
+    splits {
+        abi {
+            enable true
+            reset()
+            include 'arm64-v8a', 'armeabi-v7a', 'x86_64'
+            universalApk true
+        }
+    }
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def outputFile = output.outputFile
+            def fileName
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                if (variant.buildType.name.equals('release')) {
+                    fileName = "WhatsFreeCall_${defaultConfig.versionName}_${defaultConfig.versionCode}_${variant.productFlavors[0].name}_${output.getFilter(com.android.build.OutputFile.ABI)}.apk"
+                } else if (variant.buildType.name.equals('debug')) {
+                    fileName = "WhatsFreeCall_${defaultConfig.versionName}_${defaultConfig.versionCode}_${variant.productFlavors[0].name}_${output.getFilter(com.android.build.OutputFile.ABI)}_debug.apk"
+                }
+                output.outputFile = new File(outputFile.parent, fileName)
+            }
+        }
+    }
+}
+
+dependencies {
+    compile(name: 'sinch-android-rtc', version: '+', ext: 'aar') //sinch
+    //compile project(path: ':library')
+    compile project(path: ':adsplugin')
+    //compile(name: 'adsplugin-release', ext: 'aar')
+    compile(name: 'library-release', ext: 'aar')
+    compile files('libs/carrier-1.9.jar')//lib phone number
+    compile files('libs/geocoder-2.32.jar')//lib phone number
+    compile files('libs/prefixmapper-2.32.jar')//lib phone number
+    compile files('libs/libphonenumber-7.2.2.jar')//lib phone number
+    //firebse
+    compile('com.crashlytics.sdk.android:crashlytics:2.8.0@aar') {
+        transitive = true
+    }
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.google.android.gms:play-services-auth:12.0.0'//google登陆
+    compile 'net.openid:appauth:0.2.0'//google登陆auth 验证
+    compile 'com.github.bumptech.glide:glide:3.6.1'
+    compile 'com.squareup.retrofit2:retrofit:2.0.2'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
+    compile 'com.squareup.okhttp3:okhttp:3.0.1'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.0.1'
+    compile 'com.android.support:cardview-v7:25.3.1'
+    compile 'com.android.support:multidex:1.0.0'
+    compile 'com.facebook.android:facebook-android-sdk:4.23.0'//facebook
+    compile 'com.google.firebase:firebase-core:12.0.0'//firebse
+}
+apply plugin: 'com.google.gms.google-services'

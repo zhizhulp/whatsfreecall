@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.baisi.whatsfreecall.ui.activity.checkin.CheckInActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/translate"
+            android:theme="@style/CleanThemeAppBarOverlay"
+            app:elevation="0dp">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/checkin_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/CleanThemePopupOverlay"
+                app:title="@string/check_in">
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.AppBarLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp">
+            <LinearLayout
+                android:id="@+id/ll_check_in_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <ImageView
+                    android:id="@+id/iv_check_in_big_logo"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/check_in" />
+
+                <TextView
+                    android:id="@+id/tv_check_in_top_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/check_in_everyday_tip"
+                    android:textSize="25sp"
+                    android:textColor="@color/text_fold"/>
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_every_day_check_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_check_in_top"
+                android:layout_alignStart="@id/ll_check_in_top"
+                android:layout_alignLeft="@id/ll_check_in_top"
+                android:layout_alignRight="@id/ll_check_in_top"
+                android:layout_alignEnd="@id/ll_check_in_top"
+                android:layout_margin="10dp"
+                android:overScrollMode="never"
+                android:scrollbars="none">
+            </android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/btn_check_in_every_day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/check_in"
+            android:textSize="22sp"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_green_shape"/>
+
+
+        <LinearLayout
+            android:id="@+id/ll_check_in_reminder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:layout_margin="20dp"
+            android:gravity="center">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:textColor="@color/text_fold"
+                android:text="@string/daily_check_in_reminder_tip"/>
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/switch_check_in_reminder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"/>
+        </LinearLayout>
+    </LinearLayout>
+    <include layout="@layout/progress_layout"/>
+</FrameLayout>

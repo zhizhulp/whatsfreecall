@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.baisi.whatsfreecall">
+
+    <!-- 支付 -->
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <!-- 内容提供者 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- 获取wifimac -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 下面这5个 sinch sdk 需要用到 -->
+    <!-- 网络 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 录音通话 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 设置音效 -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <!-- 读取手机状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name=".application.WhatsFreeCallApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <service android:name=".sinchcall.service.SinchService" />
+        <!--facebook-->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <activity android:name=".MainActivity">
+
+        </activity>
+        <activity android:name=".SignInActivity">
+
+
+        </activity>
+        <activity
+            android:name=".ui.activity.HomeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+
+
+        </activity>
+        <activity
+            android:name=".ui.activity.ChargeActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".TestActivity">
+
+        </activity>
+        <activity
+            android:name=".ui.activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.ChargeSuccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ErrorActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="com.storebuff.whatsfreecall.HANDLE_AUTHORIZATION_RESPONSE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="net.openid.appauth.RedirectUriReceiverActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="com.storebuff.whatsfreecall" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.DialActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+        <activity
+            android:name=".ui.activity.SelectConutryActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".ui.activity.CallScreenActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/callscreen_theme">
+        </activity>
+        <activity
+            android:name=".ui.activity.CallResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.CallRequestErrorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.FeedBackActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ui.activity.RateActivity"
+            android:screenOrientation="portrait"></activity>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="65969b14eee48d6e9796a3ef538071b89c9542e5" />
+    </application>
+
+</manifest>

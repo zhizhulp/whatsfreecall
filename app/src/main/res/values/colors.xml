@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#129E6C</color>
+    <color name="colorPrimaryDark">#006D43</color>
+    <color name="colorAccent">#129E6C</color>
+    <color name="white">#FFFFFF</color>
+    <color name="nav_text_color">#3E3F41</color>
+    <color name="translate">#0000</color>
+
+    <color name="tabtextcolor">#CEE6D9</color>
+    <color name="tab_select_color">@color/white</color>
+
+    <color name="item_text_one">#404040</color>
+    <color name="item_text_two">#9A9A9A</color>
+
+    <color name="item_line">#A1A1A1</color>
+    <color name="default_color">#757575</color>
+    <color name="red">#A40000</color>
+    <color name="light_red">#FF0000</color>
+    <color name="call_screen_bg">#014D41</color>
+    <color name="call_result_line">#B0B0B0</color>
+    <color name="call_request_color">#EEEEEE</color>
+    <color name="black">@android:color/black</color>
+    <color name="charge_button1">#77959595</color>
+    <color name="charge_button2">#774A4A4A</color>
+    <color name="noti_bottom">#DCDCDC</color>
+    <color name="line_color">#E2E2E2</color>
+    <!-- 新增-->
+    <color name="text_fold">#de000000</color>
+    <color name="text_light">#a5a5a5</color>
+    <color name="text_check_in_dialog">#f0762d</color>
+    <color name="text_dark">#000000</color>
+    <color name="tail_yellow">#f69d01</color>
+    <color name="btn_yellow">#f6b501</color>
+    <color name="white_light">#deffffff</color>
+    <!--earn money -->
+    <color name="video_card_left">#ff6f00</color>
+    <color name="video_card_right">#000c5e</color>
+    <color name="star_card_left">#f6b501</color>
+    <color name="star_card_right">#62501e</color>
+    <color name="video_card_bg">#313F9F</color>
+    <color name="collect_star_bg">#00A0E8</color>
+    <color name="btn_yellow_02">#FFFA8B01</color>
+    <color name="invite_card_left">#FF0C7F74</color>
+    <color name="invite_card_right">#FF0C7F74</color>
+    <color name="invite_bg">#FF28A69B</color>
+</resources>

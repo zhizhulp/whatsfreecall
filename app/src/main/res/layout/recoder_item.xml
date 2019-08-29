@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/mypadding"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="horizontal">
+
+    <com.baisi.whatsfreecall.view.CircleImageView
+        android:id="@+id/iv_recoder_icon"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_toEndOf="@id/iv_recoder_icon"
+        android:layout_toRightOf="@id/iv_recoder_icon"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_recoder_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Anna"
+                android:textColor="@color/item_text_one" />
+
+            <ImageView
+                android:id="@+id/iv_recoder_call_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/tv_recoder_date"
+                android:scaleType="centerInside" />
+
+            <TextView
+                android:id="@+id/tv_recoder_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="Anna"
+                android:textColor="@color/item_text_one" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_recoder_adress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="China"
+            android:textColor="@color/item_text_two" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_contact_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/iv_recoder_icon"
+        android:background="@color/item_line" />
+</RelativeLayout>

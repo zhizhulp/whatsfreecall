@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_home_test" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/lv_contact"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:scrollbars="none"></ListView>
+
+        <TextView
+            android:id="@+id/tv_laebl_default"
+            android:layout_width="45dp"
+            android:layout_height="10dp"
+            android:layout_gravity="top|left"
+            android:background="#FFFFFF"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tv_contact_showlaebl"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="top|left"
+            android:layout_marginTop="10dp"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp" />
+    </FrameLayout>
+</LinearLayout>

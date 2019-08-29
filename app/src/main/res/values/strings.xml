@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">WhatsWeCall</string>
+    <string name="app_name_title">WeCall</string>
+    <string name="ok">OK</string>
+    <!--侧边栏-->
+    <string name="balance">Balance</string>
+    <string name="call_rate">Call Rate</string>
+    <string name="share">Share</string>
+    <string name="feedback">Feedback</string>
+    <string name="like_us">Like Us</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <!--首页-->
+    <string name="title_contacts">CONTACTS</string>
+    <string name="title_recents">RECENTS</string>
+    <!--充值-->
+    <string name="charge">Charge</string>
+    <string name="free">Free</string>
+    <string name="watch_video_ads">Watch Video Ads</string>
+    <string name="balance_charge">Balance:</string>
+    <string name="charge_success">Successfully Recharged !</string>
+    <string name="charge_success_msg">Let\'s begin the first call!</string>
+    <string name="purash">Purchasing</string>
+    <string name="charge_progress_msg">Please wait a moment</string>
+    <string name="load_end_msg">There is no purchase of goods</string>
+    <!--登陆提示-->
+    <string name="login_msg">Log in to enjoy the cheap VoIp service for international calls.</string>
+    <string name="btn_login">LOGIN WITH GOOGLE</string>
+    <string name="btn_cancel">CANCEL</string>
+    <string name="wait">Please wait...</string>
+    <string name="login_web">Can\'t login ? Try this</string>
+    <!--Error-->
+    <string name="btn_close">CLOSE</string>
+    <string name="report_the_error">REPORT THE ERROR</string>
+    <!--国家选择-->
+    <string name="select_country_title">Select a countryEntity</string>
+    <string name="search">Search</string>
+    <!--打电话界面-->
+    <string name="rate">Rate</string>
+    <string name="usd">USD</string>
+    <string name="time_remain">Time remain</string>
+    <string name="hide">HIDE</string>
+    <!--打电话结果页面-->
+    <string name="call">Call</string>
+    <string name="have_problem_whit_the_call">Have problem with the call?</string>
+    <string name="redial">Redial</string>
+    <string name="hangup">HANG UP</string>
+    <string name="speaker">SPEAKER</string>
+    <string name="load_progree_msg">Loading call information...</string>
+    <!--拨号-->
+    <string name="check_phone_msg">Please check the number accuracy</string>
+    <string name="enter_phone">Please enter phone number</string>
+    <!--余额不足-->
+    <string name="insufficient_balance">The remaining amount is not enough, please recharge</string>
+    <string name="congratuation">Congratuation!</string>
+    <!--视频广告-->
+    <string name="video_cancel">Since you canceled the video ad, please receive the award after watching the video</string>
+    <string name="watch_video_ads_un">Preparing Watch Video Ads</string>
+    <string name="reward">Reward...</string>
+    <!--Call errorActivity-->
+    <string name="want_to_get_free_money">Want to get free money?</string>
+    <string name="recharge">Recharge</string>
+    <string name="balance_un">Insufficient balance</string>
+    <!--add charg in-->
+    <string name="daily_checkin">Daily Check-in</string>
+    <string name="check_in">Check-in</string>
+    <!--check in-->
+    <string name="check_in_everyday_tip">Check-in everyday \nto earn money</string>
+    <string name="daily_check_in_reminder_tip">Daily Check-in Reminder</string>
+    <string name="get_more_tomorrow">Get more tomorrow!</string>
+    <!--earn money-->
+    <string name="go_earn_money">Free Credits</string>
+    <string name="downloaded">&#160;%s %%</string>
+    <string name="collect_start_desc">Collect different stars to earn money</string>
+    <string name="collect_start_title">Collect star</string>
+    <string name="earn_by_video">Watch Video Ads</string>
+    <string name="earn_by_stars">Collect stars</string>
+    <string name="earn_by_stars_sub">Collect stars to earn money</string>
+    <string name="earn_by_invite">Invite Friends</string>
+    <string name="earn_by_invite_sub">Each friend will get you both $0.2</string>
+    <string name="invite_desc">Each of your friend signing up,you both get $0.1</string>
+    <string name="invite_title">My invitation code:</string>
+    <string name="tv_invite_code">98887</string>
+</resources>

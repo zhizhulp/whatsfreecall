@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:padding="10dp"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/ll_chare"
+        android:clickable="true"
+        style="@style/charge_ll">
+        <TextView
+            android:id="@+id/tv_charge_show_price"
+            style="@style/charge_tv_doller"
+            android:text="$1" />
+
+        <TextView
+            android:id="@+id/tv_charge_show_satate"
+            style="@style/charge_tv_msg"
+            android:text="No gift" />
+    </LinearLayout>
+</LinearLayout>

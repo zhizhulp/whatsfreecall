@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card2"
+    android:paddingBottom="20dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_1"
+            style="@style/keyboard_linearlayout">
+
+            <TextView
+                style="@style/keyboard_text"
+                android:text="1" />
+
+            <TextView
+                style="@style/keyboard_text_latter"
+                android:text="qwe"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_2"
+            style="@style/keyboard_linearlayout">
+
+            <TextView
+                style="@style/keyboard_text"
+                android:text="2" />
+
+            <TextView
+                style="@style/keyboard_text_latter"
+                android:text="ABC" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_3"
+            style="@style/keyboard_linearlayout">
+
+            <TextView
+                style="@style/keyboard_text"
+                android:text="3" />
+
+            <TextView
+                style="@style/keyboard_text_latter"
+                android:text="DEF" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_4"
+            style="@style/keyboard_linearlayout">
+
+            <TextView
+                style="@style/keyboard_text"
+                android:text="4" />
+
+            <TextView
+                style="@style/keyboard_text_latter"
+                android:text="GHI" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_5"
+            style="@style/keyboard_linearlayout">
+
+            <TextView
+                style="@style/keyboard_text"
+                android:text="5" />
+
+            <TextView
+                style="@style/keyboard_text_latter"
+                android:text="JKL" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_6"
+            style="@style/keyboard_linearlayout">
+
+            <TextView
+                style="@style/keyboard_text"
+                android:text="6" />
+
+            <TextView
+                style="@style/keyboard_text_latter"
+                android:text="MNO" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_7"
+            style="@style/keyboard_linearlayout">
+
+            <TextView
+                style="@style/keyboard_text"
+                android:text="7" />
+
+            <TextView
+                style="@style/keyboard_text_latter"
+                android:text="PQRS" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_8"
+            style="@style/keyboard_linearlayout">
+
+            <TextView
+                style="@style/keyboard_text"
+                android:text="8" />
+
+            <TextView
+                style="@style/keyboard_text_latter"
+                android:text="TUV" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_9"
+            style="@style/keyboard_linearlayout">
+
+            <TextView
+                style="@style/keyboard_text"
+                android:text="9" />
+
+            <TextView
+                style="@style/keyboard_text_latter"
+                android:text="WXYZ" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_x"
+            style="@style/keyboard_linearlayout">
+
+            <TextView
+                style="@style/keyboard_text"
+                android:text="*" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_0"
+            style="@style/keyboard_linearlayout">
+
+            <TextView
+                style="@style/keyboard_text"
+                android:text="0" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_j"
+            style="@style/keyboard_linearlayout">
+
+            <TextView
+                style="@style/keyboard_text"
+                android:text="#" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_hide"
+            style="@style/keyboard_linearlayout">
+
+            <TextView
+                style="@style/keyboard_text"
+                android:textSize="16sp"
+                android:textColor="@color/colorPrimary"
+                android:text="HIDE" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_call"
+            style="@style/keyboard_linearlayout">
+            <ImageView
+                android:layout_width="54dp"
+                android:src="@drawable/call"
+                android:layout_height="54dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_delete"
+            style="@style/keyboard_linearlayout">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:src="@drawable/keyboard_delete"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:id="@+id/ll_progress"
+    android:clickable="true"
+    android:visibility="gone"
+    android:background="#99000000"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_marginLeft="40dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginRight="40dp"
+       >
+
+        <ProgressBar
+            android:id="@+id/pb_include"
+            android:layout_width="70dp"
+            android:layout_height="70dp" />
+
+        <TextView
+            android:textColor="@color/white"
+            android:id="@+id/tv_progress_msg"
+            android:layout_width="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginTop="5dp"
+            android:text="Loading Please wait"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

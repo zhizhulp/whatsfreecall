@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.baisi.whatsfreecall.ui.activity.earn_money.CollectStarActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/collect_start_title" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="31dp"
+        android:text="@string/collect_start_desc"
+        android:textColor="@color/text_fold"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <com.baisi.whatsfreecall.view.StateStar
+            android:id="@+id/im_01"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:icon_dis_enable_pic="@mipmap/coin01"
+            app:icon_enable_pic="@mipmap/coin1"
+            app:star_dis_enable_pic="@mipmap/star01"
+            app:star_enable_pic="@mipmap/star1" />
+
+        <com.baisi.whatsfreecall.view.StateStar
+            android:id="@+id/im_02"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:icon_dis_enable_pic="@mipmap/coin02"
+            app:icon_enable_pic="@mipmap/coin2"
+            app:star_dis_enable_pic="@mipmap/star02"
+            app:star_enable_pic="@mipmap/star2" />
+
+        <com.baisi.whatsfreecall.view.StateStar
+            android:id="@+id/im_03"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:icon_dis_enable_pic="@mipmap/coin03"
+            app:icon_enable_pic="@mipmap/coin3"
+            app:star_dis_enable_pic="@mipmap/star03"
+            app:star_enable_pic="@mipmap/star3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <com.baisi.whatsfreecall.view.StateStar
+            android:id="@+id/im_04"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:icon_dis_enable_pic="@mipmap/coin04"
+            app:icon_enable_pic="@mipmap/coin4"
+            app:star_dis_enable_pic="@mipmap/star04"
+            app:star_enable_pic="@mipmap/star4" />
+
+        <com.baisi.whatsfreecall.view.StateStar
+            android:id="@+id/im_05"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:icon_dis_enable_pic="@mipmap/coin05"
+            app:icon_enable_pic="@mipmap/coin5"
+            app:star_dis_enable_pic="@mipmap/star05"
+            app:star_enable_pic="@mipmap/star5" />
+    </LinearLayout>
+
+    <com.baisi.whatsfreecall.view.progress_button.AnimDownloadProgressButton
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:progressbtn_background_color="@color/star_card_left"
+        app:progressbtn_background_second_color="@color/star_card_right"
+        app:progressbtn_text_color="@color/white"
+        app:progressbtn_text_covercolor="@color/white"
+        app:progressbtn_text_size="15"
+        app:progressbtn_current_text="Collect"
+        android:id="@+id/tv_collect"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+    <include layout="@layout/progress_layout"/>
+</android.support.constraint.ConstraintLayout>

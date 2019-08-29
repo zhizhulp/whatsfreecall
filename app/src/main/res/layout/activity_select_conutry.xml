@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.baisi.whatsfreecall.ui.activity.SelectConutryActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:background="@color/translate"
+        android:theme="@style/CleanThemeAppBarOverlay"
+        app:elevation="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/select_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/CleanThemePopupOverlay"
+            app:title="@string/select_country_title"></android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/search_edit_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp">
+            <!-- app:background="@drawable/searchview_shape"-->
+            <android.support.v7.widget.SearchView
+                android:id="@+id/sc_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:iconifiedByDefault="false"
+                android:queryBackground="@color/translate"
+                app:queryBackground="@color/translate"
+
+                app:queryHint="@string/search"></android.support.v7.widget.SearchView>
+        </android.support.v7.widget.CardView>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/lv_contact_country"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:cacheColorHint="#00000000"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:scrollbars="none"></ListView>
+
+            <TextView
+                android:id="@+id/tv_contact_showlaebl_country"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="top|left"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

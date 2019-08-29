@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--如果要显示一条分割线 可以写多个group 并且给每一个设置好id 如果想显示title 可以另起一个item 设置title 在item里面写menu 如下-->
+    <!--如果有多个item 加上 checkable属性可以看到选中事件-->
+    <group
+        android:id="@+id/grou_first"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_balance"
+            android:checkable="false"
+            android:icon="@drawable/nav_balance"
+            android:title="@string/balance" />
+        <item
+            android:id="@+id/nav_call_rate"
+            android:checkable="false"
+            android:icon="@drawable/nav_doller"
+            android:title="@string/call_rate" />
+        <item
+            android:id="@+id/nav_share"
+            android:checkable="false"
+            android:icon="@drawable/nav_share"
+            android:title="@string/share" />
+        <item
+            android:id="@+id/nav_feedback"
+            android:checkable="false"
+            android:icon="@drawable/nav_feedback"
+            android:title="@string/feedback" />
+        <item
+            android:id="@+id/nav_hand"
+            android:checkable="false"
+            android:icon="@drawable/nav_like_us"
+            android:title="@string/like_us" />
+    </group>
+
+</menu>
